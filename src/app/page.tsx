@@ -1,12 +1,8 @@
 export default function Home() {
   return (
-    <main className="min-h-dvh grid place-items-center p-8">
-      <section className="max-w-xl text-center space-y-4">
-        <h1 className="text-4xl font-bold">Under Construction</h1>
-        <p className="text-lg text-neutral-600">
-          Deployed on <strong>Vercel</strong> with Next.js.
-        </p>
-      </section>
+    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
+      </div>
     </main>
   );
 }
