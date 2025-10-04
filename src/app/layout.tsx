@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import NavLink from "../../components/NavLink";
 import Link from "next/link";
+import Image from "next/image";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -39,10 +40,11 @@ export default function RootLayout({
   {/* Logo floats above the navbar, centered */}
   <div className="absolute inset-x-0 top-1 flex justify-center">
     <Link href="/">
-      <img
+      <Image
         src="/b_logo_black.svg"
         alt="Bielawski Design Logo"
-        className="h-12 w-auto"
+        width={30}
+        height={30}
       />
     </Link>
   </div>
