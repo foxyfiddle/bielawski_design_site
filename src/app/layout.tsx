@@ -22,36 +22,39 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en">
+    <html lang="en" data-theme="josh">
+      {/* or "light" */}
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-base-100 text-base-content`}
       >
-       <div className="relative bg-base-200">
-  <div className="navbar bg-base-100 flex justify-start gap-7 px-6 mt-15">
-    <NavLink href="/">Work</NavLink>
-    <NavLink href="/about">About</NavLink>
-    <NavLink href="/contact">Contact</NavLink>
-  </div>
+        <div className="relative">
+          {/* Navbar row */}
+          <div className="navbar flex justify-start gap-7 px-6 mt-16">
+            <NavLink href="/">Work</NavLink>
+            <NavLink href="/about">About</NavLink>
+            <NavLink href="/contact">Contact</NavLink>
+          </div>
 
-  {/* Logo floats above the navbar, centered */}
-  <div className="absolute inset-x-0 top-1 flex justify-center">
-    <Link href="/">
-      <Image
-        src="/b_logo_black.svg"
-        alt="Bielawski Design Logo"
-        width={30}
-        height={30}
-      />
-    </Link>
-  </div>
-</div>
+          {/* Floating, centered logo (won't block links) */}
+          <div className="pointer-events-none absolute inset-x-0 top-2 flex justify-center">
+            <Link href="/" className="pointer-events-auto">
+              <Image
+                src="/b_logo_black.svg"
+                alt="Bielawski Design Logo"
+                width={40}
+                height={40}
+                priority
+              />
+            </Link>
+          </div>
+        </div>
 
-
-        {children}
+        {/* Prevent overlap with navbar/logo */}
+        <main className="pt-10">{children}</main>
       </body>
     </html>
   );

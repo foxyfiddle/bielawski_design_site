@@ -4,34 +4,34 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-type Props = {
+export default function NavLink({
+  href,
+  children,
+}: {
   href: string;
   children: React.ReactNode;
-  /** when true, only exact match is active (default false) */
-  exact?: boolean;
-};
-
-export default function NavLink({ href, children, exact = false }: Props) {
-  const pathname = usePathname() || "/";
-
-  // Normalize paths (strip trailing slashes except root)
-  const norm = (s: string) => s.replace(/\/+$/, "") || "/";
-  const current = norm(pathname);
-  const target = norm(href);
-
-  const isActive = exact
-    ? current === target
-    : current === target || current.startsWith(target + "/");
-
-  const base = "no-underline pb-1 transition-colors";
-  const activeCls = "border-b-2 border-primary text-primary";
-  const inactiveCls = "hover:border-b-2 hover:border-base-content";
+}) {
+  const pathname = usePathname();
+  const isActive = pathname === href;
 
   return (
-    <Link href={href} className={`${base} ${isActive ? activeCls : inactiveCls}`}>
-      {children}
-    </Link>
+    <Link
+  href={href}
+  className={`relative inline-flex items-center h-8 ${
+    isActive
+      ? "text-primary after:content-[''] after:absolute after:left-0 after:bottom-[22px] after:w-full after:h-[2px] after:bg-primary"
+      : "hover:after:content-[''] hover:after:absolute hover:after:left-0 hover:after:bottom-[22px] hover:after:w-full hover:after:h-[2px] hover:after:bg-neutral"
+  }`}
+>
+  <span className="relative top-[-20px] block leading-none">
+    {children}
+  </span>
+</Link>
+
+
+
+
+
+
   );
 }
-
-
