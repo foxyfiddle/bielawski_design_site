@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main>
-      <h1 className="text-6xl font-bold text-center mt-40 mb-10 mr-50 ml-50">
+      <h1 className="text-6xl font-bold text-center text-base-content mt-40 mb-10 mr-50 ml-50">
         {"I've been working on some cool stuff."}
       </h1>
 

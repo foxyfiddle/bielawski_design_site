@@ -26,14 +26,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" data-theme="josh">
+    <html lang="en" data-theme="josh" className="bg-neutral">
       {/* or "light" */}
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-base-100 text-base-content`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-neutral text-base-content`}
       >
         <div className="relative">
           {/* Navbar row */}
-          <div className="navbar flex justify-start gap-7 px-6 mt-16">
+          <div className="navbar flex justify-start gap-7 px-6 mt-16 bg-neutral">
             <NavLink href="/">Work</NavLink>
             <NavLink href="/about">About</NavLink>
             <NavLink href="/contact">Contact</NavLink>
