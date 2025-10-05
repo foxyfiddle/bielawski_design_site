@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main>
-      <h1 className="text-6xl font-bold text-center text-base-content mt-40 mb-65 mr-50 ml-50">
+      <h1 className="text-6xl font-bold  font-body text-center text-base-content mt-40 mb-65 mr-50 ml-50">
         {"I've been working on some cool stuff."}
       </h1>
 
@@ -12,10 +12,7 @@ export default function Home() {
       <div className="flex flex-col">
         <div className="flex flex-row justify-center gap-10 p-10">
           <div className="flex flex-col items-start">
-            <Link
-              href="/work/cvm"
-              className="flex items-center justify-center"
-            >
+            <Link href="/work/cvm" className="flex items-center justify-center">
               <Image
                 src="/web_lockup.png"
                 alt="CVM Project Thumbnail"
@@ -26,10 +23,7 @@ export default function Home() {
             <p className="pt-7">Cuyahoga Valley Media</p>
           </div>
           <div className="flex flex-col items-start">
-            <Link
-              href="/work/cvm"
-              className="flex items-center justify-center"
-            >
+            <Link href="/work/cvm" className="flex items-center justify-center">
               <Image
                 src="/web_lockup.png"
                 alt="CVM Project Thumbnail"
@@ -40,10 +34,7 @@ export default function Home() {
             <p className="pt-7">Cuyahoga Valley Media</p>
           </div>
           <div className="flex flex-col items-start">
-            <Link
-              href="/work/cvm"
-              className="flex items-center justify-center"
-            >
+            <Link href="/work/cvm" className="flex items-center justify-center">
               <Image
                 src="/web_lockup.png"
                 alt="CVM Project Thumbnail"
@@ -56,10 +47,7 @@ export default function Home() {
         </div>
         <div className="flex flex-row justify-center gap-10 p-10">
           <div className="flex flex-col items-start">
-            <Link
-              href="/work/cvm"
-              className="flex items-center justify-center"
-            >
+            <Link href="/work/cvm" className="flex items-center justify-center">
               <Image
                 src="/web_lockup.png"
                 alt="CVM Project Thumbnail"
@@ -70,10 +58,7 @@ export default function Home() {
             <p className="pt-7">Cuyahoga Valley Media</p>
           </div>
           <div className="flex flex-col items-start">
-            <Link
-              href="/work/cvm"
-              className="flex items-center justify-center"
-            >
+            <Link href="/work/cvm" className="flex items-center justify-center">
               <Image
                 src="/web_lockup.png"
                 alt="CVM Project Thumbnail"
@@ -84,10 +69,7 @@ export default function Home() {
             <p className="pt-7">Cuyahoga Valley Media</p>
           </div>
           <div className="flex flex-col items-start">
-            <Link
-              href="/work/cvm"
-              className="flex items-center justify-center"
-            >
+            <Link href="/work/cvm" className="flex items-center justify-center">
               <Image
                 src="/web_lockup.png"
                 alt="CVM Project Thumbnail"

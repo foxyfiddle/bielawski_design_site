@@ -1,21 +1,27 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
-/* your global styles below... */
-
 /* Custom theme */
 :root[data-theme="josh"] {
-  /* your existing HSL triplets */
-  --p: 146 35% 38%;  --pc: 0 0% 100%;
-  --s: 166 20% 50%;  --sc: 0 0% 100%;
-  --a: 38 97% 61%;   --ac: 0 0% 100%;
-  --n: 15 100% 99%;  --nc: 0 3% 6%;
-  --b1: 47 47% 96%;  --b2: 210 20% 98%;
-  --b3: 210 18% 95%; --bc: 0 3% 6%;
-  --in: 221 83% 53%; --su: 142 72% 29%;
-  --wa: 32 95% 44%;  --er: 0 72% 51%;
+  /* 🎨 Colors */
+  --p: 146 35% 38%;
+  --pc: 0 0% 100%;
+  --s: 166 20% 50%;
+  --sc: 0 0% 100%;
+  --a: 38 97% 61%;
+  --ac: 0 0% 100%;
+  --n: 15 100% 99%;
+  --nc: 0 3% 6%;
+  --b1: 47 47% 96%;
+  --b2: 210 20% 98%;
+  --b3: 210 18% 95%;
+  --bc: 0 3% 6%;
+  --in: 221 83% 53%;
+  --su: 142 72% 29%;
+  --wa: 32 95% 44%;
+  --er: 0 72% 51%;
 
-  /* 👇 Map to Tailwind v4 color tokens */
+  /* 🌈 Tailwind v4 color tokens */
   --color-primary: hsl(var(--p));
   --color-primary-content: hsl(var(--pc));
   --color-secondary: hsl(var(--s));
@@ -24,18 +30,26 @@
   --color-accent-content: hsl(var(--ac));
   --color-neutral: hsl(var(--n));
   --color-neutral-content: hsl(var(--nc));
-
   --color-base-100: hsl(var(--b1));
   --color-base-200: hsl(var(--b2));
   --color-base-300: hsl(var(--b3));
   --color-base-content: hsl(var(--bc));
-
-  /* Optional: state colors if you use them */
   --color-info: hsl(var(--in));
   --color-success: hsl(var(--su));
   --color-warning: hsl(var(--wa));
   --color-error: hsl(var(--er));
+
+  /* 👇 Custom Font Variables */
+  --font-body: "Jost";
+  --font-heading: "Arvo";
 }
 
-html { scrollbar-gutter: stable both-edges; }
+/* Tell Tailwind about your theme fonts */
+@theme inline {
+  --font-body: var(--font-body);
+  --font-heading: var(--font-heading);
+}
 
+html {
+  scrollbar-gutter: stable both-edges;
+}

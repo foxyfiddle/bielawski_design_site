@@ -4,15 +4,17 @@ import "./globals.css";
 import NavLink from "../../components/NavLink";
 import Link from "next/link";
 import Image from "next/image";
+import { Arvo, Jost } from "next/font/google";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const heading = Arvo({
   subsets: ["latin"],
+  weight: ["400", "700"], // includes bold
+  variable: "--ff-heading", // exposes a CSS var
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const body = Jost({
   subsets: ["latin"],
+  variable: "--ff-body",
 });
 
 export const metadata: Metadata = {
@@ -29,7 +31,7 @@ export default function RootLayout({
     <html lang="en" data-theme="josh" className="bg-neutral">
       {/* or "light" */}
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-neutral text-base-content`}
+        className={`${heading.variable} ${body.variable} antialiased bg-neutral text-base-content`}
       >
         <div className="relative">
           {/* Navbar row */}
